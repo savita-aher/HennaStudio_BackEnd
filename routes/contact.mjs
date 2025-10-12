@@ -1,9 +1,14 @@
 import express from "express";
-import { createContact } from "../controllers/contactController.mjs";
+import {
+  createContact,
+  getAllContacts,
+  deleteContact
+} from "../controllers/contactController.mjs";
 
 const router = express.Router();
 
-// POST /api/contact
 router.post("/", createContact);
+router.get("/", getAllContacts);
+router.delete("/:id", deleteContact);
 
 export default router;
