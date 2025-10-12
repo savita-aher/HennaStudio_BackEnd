@@ -3,6 +3,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import connectDB from "./db/conn.mjs";
+import contactRoutes from "./routes/contact.mjs";
+
 
 //  Setup
 dotenv.config();
@@ -17,6 +19,8 @@ app.use(express.json());
 app.use(cors());
 
 //routes
+//SAVE ALL Data to MongoDb
+app.use("/api/contact", contactRoutes);
 
 
 
