@@ -16,6 +16,10 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+//routes
+
+
+
 //  Listener
 app.listen(PORT, () => {
   console.log(`HennaBloom backend running on PORT: ${PORT}`);
