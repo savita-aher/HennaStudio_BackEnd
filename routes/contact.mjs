@@ -10,5 +10,9 @@ const router = express.Router();
 router.post("/", createContact);
 router.get("/", getAllContacts);
 router.delete("/:id", deleteContact);
+router.get('/test', (req, res) => {
+  res.send('Contact route is working');
+});
+
 
 export default router;
