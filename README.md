@@ -23,3 +23,11 @@
 - Your HennaImage model stays the same — just swap out      imageUrl values
 
  ## (trim: true) is a schema option that automatically removes whitespace from the beginning and end of a string when it's saved to the database.
+
+🧪 Testing
+GET     /api/faqs             → Fetch all FAQs
+POST    /api/faqs             → Create a new FAQ
+PUT     /api/faqs/:id         → Update an existing FAQ
+DELETE  /api/faqs/:id         → Delete a FAQ
+
+
