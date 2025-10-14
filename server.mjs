@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 import cors from "cors";
 import connectDB from "./db/conn.mjs";
 import contactRoutes from "./routes/contact.mjs";
-import QuestionRoutes from "./routes/faq.mjs";
+import FAQ from "./routes/faq.mjs";
 
 
 //  Setup
@@ -23,7 +23,7 @@ app.use(cors());
 //routes
 //SAVE ALL Data to MongoDb
 app.use("/api/contact", contactRoutes);
-app.use("/api/FAQ",QuestionRoutes)
+app.use("/api/faq",FAQ)
 
 
 //  Listener
