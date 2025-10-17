@@ -16,6 +16,7 @@
 - $npm init -y
 - npm install express mongoose cors dotenv
 - npm install --save-dev nodemon
+- npm install bcrypt
 
 ## 🧪 Hybrid Strategy for storing my own henna images
 - Use local folder for dev (/public/images)
@@ -29,5 +30,8 @@ GET     /api/faqs             → Fetch all FAQs
 POST    /api/faqs             → Create a new FAQ
 PUT     /api/faqs/:id         → Update an existing FAQ
 DELETE  /api/faqs/:id         → Delete a FAQ
+
+🔐 Admin Password Hashing with bcrypt
+To ensure secure storage of admin credentials, HennaBloom Studio uses bcrypt to hash passwords before saving them to the database. This prevents plain-text password exposure and supports safe authentication.
 
 
