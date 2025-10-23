@@ -7,7 +7,8 @@ import connectDB from "./db/conn.mjs";
 import contactRoutes from "./routes/contact.mjs";
 import FAQRoutes from "./routes/faq.mjs";
 import AdminRoutes from "./routes/admin.mjs"
-
+import imageUploadRoute from './routes/imageUpload.mjs';
+import designsRoutes from './routes/designs.mjs';
 
 //  Setup
 dotenv.config();
@@ -22,10 +23,11 @@ app.use(express.json());
 app.use(cors());
 
 //routes
-//SAVE ALL Data to MongoDb
 app.use("/api/contact", contactRoutes);
 app.use("/api/faq",FAQRoutes);
 app.use("/api/admin",AdminRoutes);
+app.use('/api/images', imageUploadRoute);
+app.use('/api/designs', designsRoutes);
 
 
 //  Listener

@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const designSchema = new mongoose.Schema(
+const ImageSchema = new mongoose.Schema(
   {
     category: {
       type: String,
@@ -23,14 +23,11 @@ const designSchema = new mongoose.Schema(
       required: [true, "Image URL is required"],
       trim: true
     },
-    isLocal: {
-      type: Boolean,
-      default: true
-    },
     price: {
       type: Number,
       required: [true, "Price is required"],
-      min: 0
+      min: [0, "Price must be a positive number"]
+
     },
     styleTag: {
       type: String,
@@ -45,5 +42,6 @@ const designSchema = new mongoose.Schema(
   }
 );
 
-const Design = mongoose.model("Design", designSchema);
-export default Design;
+ImageSchema.index({ styleTag: 1 }, { unique: true });
+
+export default mongoose.model('Image', ImageSchema);
