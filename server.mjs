@@ -9,6 +9,7 @@ import FAQRoutes from "./routes/faq.mjs";
 import AdminRoutes from "./routes/admin.mjs"
 import imageUploadRoute from './routes/imageUpload.mjs';
 import designsRoutes from './routes/designs.mjs';
+import errorHandler from './middleware/errorHandler.mjs';
 
 //  Setup
 dotenv.config();
@@ -29,6 +30,8 @@ app.use("/api/admin",AdminRoutes);
 app.use('/api/images', imageUploadRoute);
 app.use('/api/designs', designsRoutes);
 
+// Global Error Handler 
+app.use(errorHandler);
 
 //  Listener
 app.listen(PORT, () => {

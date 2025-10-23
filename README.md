@@ -22,6 +22,9 @@ HennaBloom Studio’s backend powers a modular, secure, and scalable henna desig
 - Cloudinary-powered image uploads
 - Modular route and model organization
 
+## Error Handling
+- HennaBloom Studio uses a centralized Express middleware (errorHandler.mjs) to manage all backend errors consistently and securely.
+
 ## 📁 Folder Structure
 ![Backend folder structure ](./assets/BackendFolder.png)
 
