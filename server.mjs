@@ -21,9 +21,15 @@ connectDB();
 
 //  Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://henna-admin.onrender.com'],
+  credentials: true
+}));
 
 //routes
+app.get('/', (req, res) => {
+  res.send('HennaBloom backend is live');
+});
 app.use("/api/contact", contactRoutes);
 app.use("/api/faq",FAQRoutes);
 app.use("/api/admin",AdminRoutes);

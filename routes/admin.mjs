@@ -64,6 +64,10 @@ router.post('/login', async (req, res, next) => {
   }
 });
 
+router.get('/test', (req, res) => {
+  res.send('Admin route is working');
+});
+
 // Protected dashboard route
 router.get('/dashboard', verifyToken, (req, res) => {
   res.json({
