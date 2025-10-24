@@ -22,9 +22,10 @@ connectDB();
 //  Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://henna-admin.onrender.com'],
+  origin: ['http://localhost:5173', 'https://hennastudio-frontend.onrender.com'],
   credentials: true
 }));
+
 
 //routes
 app.get('/', (req, res) => {
