@@ -11,7 +11,7 @@ HennaBloom Studio’s backend powers a modular, secure, and scalable henna desig
 - ✅Build routes (CRUD for each model)
 - ✅Test with Postman or frontend
 - ✅Enable CORS and middleware
-- Deploy to Render
+- ✅Deploy to Render
 
 ## 🧬 Backend Functionality
 - RESTful API built with Express and MongoDB
